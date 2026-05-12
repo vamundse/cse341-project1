@@ -5,7 +5,7 @@
     "description": "Gets, updates, creates and deletes contacts from the database",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-project1-poea.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
