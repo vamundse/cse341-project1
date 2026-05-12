@@ -5,7 +5,7 @@ const doc = {
     title: 'Contact API',
     description: 'Gets, updates, creates and deletes contacts from the database'
   },
-  host: 'localhost:3000'
+  host: 'cse341-project1-poea.onrender.com'
 };
 
 const outputFile = './swagger.json';
