@@ -31,6 +31,8 @@ const validate = (req, res, next) => {
         return next()
     };
 
+    console.log('Full error object:', JSON.stringify(errors.array(), null, 2)); // Debug
+
     const extractedErrors = []
     errors.array().map(err => extractedErrors.push({ [err.param]: err.msg }));
     
