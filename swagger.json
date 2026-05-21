@@ -8,55 +8,23 @@
   "host": "cse341-project1-poea.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/contacts/": {
       "get": {
         "description": "",
-        "produces": [
-          "application/json"
-        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
       "post": {
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "422": {
+            "description": "Unprocessable Entity"
           }
         }
       }
@@ -64,20 +32,9 @@
     "/contacts/{id}": {
       "get": {
         "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
@@ -89,57 +46,29 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "422": {
+            "description": "Unprocessable Entity"
           }
         }
       },
       "delete": {
         "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api-docs/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
