@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const contactsController = require('../controllers/contacts');
-const validator = require('../utilities/userValidation');
+const validator = require('../utilities/contactValidation');
 
 router.get('/', contactsController.getAll);
 router.get('/:id', contactsController.getSingle);
