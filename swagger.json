@@ -13,33 +13,34 @@
   "paths": {
     "/contacts/": {
       "get": {
-        "description": "",
+        "description": "Get all contacts",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server error"
           }
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a contact",
         "responses": {
+          "204": {
+            "description": "Created successfully"
+          },
           "422": {
-            "description": "Unprocessable Entity"
+            "description": "Validation error"
+          },
+          "500": {
+            "description": "Server error"
           }
         }
       }
     },
     "/contacts/{id}": {
       "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      },
-      "put": {
-        "description": "",
+        "description": "Get a single contact",
         "parameters": [
           {
             "name": "id",
@@ -49,16 +50,52 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server error"
+          }
+        }
+      },
+      "put": {
+        "description": "Update a contact",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Updated successfully"
+          },
           "422": {
-            "description": "Unprocessable Entity"
+            "description": "Validation error"
+          },
+          "500": {
+            "description": "Server error"
           }
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete a contact",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
-          "default": {
-            "description": ""
+          "204": {
+            "description": "Deleted successfully"
+          },
+          "500": {
+            "description": "Server error"
           }
         }
       }
