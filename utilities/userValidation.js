@@ -3,17 +3,25 @@ const contactValidationRules = () => {
     return [
         body('firstName')
             .isLength({ min: 2 })
-            .isString(),
+            .withMessage('The first name must be at least 2 characters')
+            .isString()
+            .withMessage('The first name must be a string'),
         body('lastName')
             .isLength({ min: 3 })
-            .isString(),
+            .withMessage('The last name must be at least 2 characters')
+            .isString()
+            .withMessage('The last name must be a string'),
         body('email')
-            .isEmail(),
+            .isEmail()
+            .withMessage('The email must be an email example: (username@email.com'),
         body('favColor')
             .isLength({ min: 2})
-            .isString(),
+            .withMessage('The favorite color must be at least 2 characters')
+            .isString()
+            .withMessage('The favorite color must be a string'),
         body('birthday')
             .isDate()
+            .withMessage('The birthday must be a date (YYYY-MM-DD)')
     ]
 };
 
